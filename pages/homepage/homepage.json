@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "eventgroup": "/components/eventgroup/eventgroup",
+    "popover": "/components/popover/popover",
+    "popover-item": "/components/popover-item/popover-item"
+  }
+}

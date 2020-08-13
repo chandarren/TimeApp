@@ -1,0 +1,254 @@
+<view class="view-explain">
+<view class="view-explain-left">
+<view class="view-explain-left-top">
+<text class="txt-explain-left-title">时刻记1.0</text>
+<text class="txt-explain-left-content">帮你记住重要事情，不遗忘</text>
+</view>
+<view class="view-explain-left-bottom">
+<text class="txt-explain-left-bottom">简洁·方便·快捷</text>
+</view>
+</view>
+<view class="view-explain-right">
+<view class="view-explain-right-null">
+</view>
+<image class="img-explain-right" src="/images/icon/jilu.png"></image>
+</view>
+</view>
+
+
+<view class="view-system-notice">
+
+<view class="view-system-notice-title">
+<image class="img-system-notice-title" src="/images/icon/notice-1.png"></image>
+<text class="txt-xtgg" bindtap="systemNotice">系统公告</text>
+<text class="txt-xtgg-explain" bindtap="systemNotice">{{systemNoticeTitle}}</text>
+</view>
+
+<view class="view-system-notice-content">
+<view class="view-cumulative-reminder" style="width:{{cumulativeReminderW}}rpx;">
+<view class="view-cumulative-reminder-img">
+<image class="img-cumulative-reminder" src="/images/icon/time-2.png"></image>
+</view>
+<view class="view-cumulative-reminder-txt">
+<text class="txt-system-notice-count">{{systemNoticeCount}}</text>
+<text class="txt-system-notice-content">累计提醒</text>
+</view>
+</view>
+<view class="view-active-users" style="width:{{cumulativeReminderW}}rpx;">
+<view class="view-cumulative-reminder-img">
+<image class="img-active-users" src="/images/icon/active-user.png"></image>
+</view>
+<view class="view-cumulative-reminder-txt">
+<text class="txt-system-notice-count">{{activeUserCount}}</text>
+<text class="txt-system-notice-content">活跃用户</text>
+</view>
+</view>
+<view class="view-reminder-events" bindtap="opensssview" style="width:{{cumulativeReminderW}}rpx;">
+<view class="view-cumulative-reminder-img">
+<image class="img-reminder-events" src="/images/icon/cumulative-reminder.png"></image>
+</view>
+<view class="view-cumulative-reminder-txt">
+<text class="txt-system-notice-count">{{reminderEventsCount}}</text>
+<text class="txt-system-notice-content">提醒事件</text>
+</view>
+</view>
+</view>
+
+</view>
+
+
+<view class="view-split-line">
+</view>
+
+
+<view class="view-task-list">
+
+<view class="view-task-list-title">
+<text class="txt-task-list-title">任务列表</text>
+</view>
+
+
+<view class="view-task-list-content">
+<scroll-view scroll-x="true" style="width:100%;white-space:nowrap;display:flex;" class="tt" bindscrolltolower="handleScroll">
+
+<view class="view-task-list-item-first">
+
+<image class="img-task-list-item-first" src="/images/icon/share-friend.png"></image>
+<view class="view-task-list-item-first-content">
+<view class="cc">
+<text class="txt-task-list-item-title-first">分享朋友圈</text>
+</view>
+
+<view class="view-task-list-item-content">
+<text class="txt-task-list-item-content-first-line1">转发分享朋友圈</text>
+<text class="txt-task-list-item-content-first-line2">提醒数量永久加1</text>
+</view>
+<button class="{{isShareMoments?'btn-task-list-item-yes':'btn-task-list-item-no'}}" bindtap="openshareview">{{isShareMoments?'已完成':'未完成'}}</button>
+</view>
+
+</view>
+<view class="view-task-list-item">
+<image class="img-task-list-item-first" src="/images/icon/enjoy-remind.png"></image>
+<view class="view-task-list-item-first-content">
+<text class="txt-task-list-item-title">共享提醒</text>
+<view class="view-task-list-item-content">
+<text class="txt-task-list-item-content-line1">共享提醒事件</text>
+<text class="txt-task-list-item-content-first-line2">朋友免创建同享</text>
+</view>
+<button class="btn-task-list-item-no" bindtap="opensssview" >去完成</button>
+</view>
+</view>
+<view class="view-task-list-item-last">
+<image class="img-task-list-item-first" src="/images/icon/invite-user.png"></image>
+<view class="view-task-list-item-first-content">
+<view class="cc">
+<text class="txt-task-list-item-title">邀请用户</text>
+</view>
+
+<view class="view-task-list-item-content">
+<text class="txt-task-list-item-content-last-line1">成功邀请一个用户</text>
+<text class="txt-task-list-item-content-first-line2">语音/短信次数加5</text>
+</view>
+<button class="btn-task-list-item-no" bindtap="openinvitedview">去完成</button>
+</view>
+</view>
+
+</scroll-view>
+</view>
+</view>
+
+
+<view class="view-recently-remind">
+<view class="view-recently-remind-title">
+<text class="txt-recently-remind-title">近7天提醒</text>
+</view>
+
+<view class="view-recently-remind-content" wx:if="{{isRecentReminder}}">
+<eventgroup wx:for="{{recentReminderList}}" wx:key="key" eventtype='{{item.eventtype}}' title='{{item.title}}' describe='{{item.describe}}' date_remark="{{item.date_remark}}" fromshare="{{item.fromshare}}" index='{{item.id}}' type='noenjoylist'></eventgroup>
+</view>
+<view wx:else class="view-no-recent-reminder">
+暂无相关提醒
+</view>
+</view>
+
+
+<view class="view-guide">
+
+<view class="view-guide-title">
+<text class="txt-guide-title">新手指南</text>
+</view>
+<view class="view-guide-content">
+<view class="view-guide-content-one-line">
+<view class="view-guide-content-item" style="width:{{guideContentItemW}}rpx;" bindtap="addEvent">
+<image class="img-guide-content" src="/images/icon/add-event.png"></image>
+<view class="view-guide-des">
+<text class="txt-guide-item-title">新建事件</text>
+<text class="txt-guide-item-des">点击右下角 + 号创建提醒事件</text>
+</view>
+</view>
+
+<view class="view-guide-content-item" style="width:{{guideContentItemW}}rpx;"  bindtap="openshareview">
+<image class="img-guide-content" src="/images/icon/share-user.png"></image>
+<view class="view-guide-des">
+<text class="txt-guide-item-title">分享转发</text>
+<text class="txt-guide-item-des">分享转发免费增加事件创建数</text>
+</view>
+</view>
+</view>
+
+<view class="view-guide-content-two-line">
+<view class="view-guide-content-item" style="width:{{guideContentItemW}}rpx;" bindtap="openpushcode">
+<image class="img-guide-content" src="/images/icon/invited-user2.png"></image>
+<view class="view-guide-des">
+<text class="txt-guide-item-title">邀请好友</text>
+<text class="txt-guide-item-des">邀请好友注册免费赠送语音次数</text>
+</view>
+</view>
+<view class="view-guide-content-item" style="width:{{guideContentItemW}}rpx;" bindtap="helpinfo">
+<image class="img-guide-content" src="/images/icon/help-doc.png"></image>
+<view class="view-guide-des">
+<text class="txt-guide-item-title">帮助文档</text>
+<text class="txt-guide-item-des">操作疑难点全面解答</text>
+</view>
+</view>
+</view>
+</view>
+
+</view>
+
+
+<view class="view-hot-posts">
+<text class="txt-hot-posts-title">热门文章</text>
+
+<view class="view-hot-posts-box">
+
+<block wx:if="{{isHotArticleList}}">
+<view class="view-hot-posts-item-first" wx:for="{{hotArticleList}}" wx:key="key" data-item="{{item}}" bindtap="hotArticleDetail">
+<view>
+<image class="img-hot-posts-item" src="{{item.thumb_url}}"></image>
+</view>
+
+<view class="view-hot-posts-item-content" style="width:{{hotPostsItemContentW}}rpx;">
+<text class="txt-hot-posts-item-content-title">{{item.title}}</text>
+<text class="txt-hot-posts-item-content-des">{{item.digest}}</text>
+<view class="view-hot-posts-item-content-foot">
+
+<view class="view-hot-posts-time">
+<image class="img-hot-posts-time" src="/images/icon/hot-posts-time.png"></image>
+<text class="txt-hot-posts-time">{{item.update_time}}</text>
+</view>
+
+<!--<view class="view-hot-posts-read-like">
+<view class="view-hot-posts-read">
+<image class="img-hot-posts-read" src="/images/icon/hot-posts-read.png"></image>
+<text class="txt-hot-posts-read">254</text>
+</view>
+
+<view class="view-hot-posts-like">
+<image class="img-hot-posts-like" src="/images/icon/hot-posts-like.png"></image>
+<text class="txt-hot-posts-like">124</text>
+</view>
+
+</view>-->
+</view>
+</view>
+</view>
+</block>
+<block wx:else>
+<view class="view-no-hotArticle">暂无文章内容</view>
+</block>
+
+</view>
+</view>
+
+
+<view class="view-add-event" bindtap="addEvent">
+<image class="img-add-event" src="/images/icon/home-add.png"></image>
+</view>
+
+<!-- /*遮罩层，用于新手提示*/ -->
+ <view class='mask' wx:if="{{flag}}" catchtouchmove="myCatchTouch">
+  <view class="mask-ok" bindtap="guanbizhezao">
+    <view class="mask-ok-two">
+     <text>跳过新手指引</text>
+    </view>
+  </view>
+  <view class='one' wx:if="{{showone}}">
+   <popover id='popover' pw='200' ph='200'>
+    <popover-item bindtap='one'>点击“+”开始创建事件</popover-item>    
+   </popover>
+  </view>
+  <view class='two' wx:if="{{showtwo}}">
+   <popover id='popovertwo' pw='150' ph='150'>
+    <popover-item  bindtap='two'>最近7天提醒，点</popover-item> 
+    <popover-item  bindtap='two'>击“...”可修改事件</popover-item>     
+   </popover>
+  </view>
+  <view class='three' wx:if="{{showthree}}">
+   <popover id='popoverthree' pw='150' ph='150' vertical='middle'>
+    <popover-item  bindtap='three'>分享朋友圈、邀请</popover-item> 
+    <popover-item  bindtap='three'>好友赠送事件创建</popover-item> 
+    <popover-item  bindtap='three'>、短信语音次数</popover-item>    
+   </popover>
+  </view>
+</view>

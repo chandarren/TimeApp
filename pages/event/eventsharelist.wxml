@@ -1,0 +1,11 @@
+<view class="view-recently-remind">
+<view class="view-recently-remind-content">
+
+<eventgroup id="{{item.id}}" class="eventg" wx:for="{{eventList}}" wx:key="key" eventtype='{{item.eventtype}}' title='{{item.title}}' describe='{{item.describe}}' date_remark="{{item.date_remark}}" fromshare="{{item.fromshare}}" index='{{item.id}}' type="enjoylist"></eventgroup>
+
+</view>
+</view>
+
+<view class="content-login">
+<button class="content-login-btn" bindtap="oneButtonJoin"><image class="content-login-img" src="../../images/icon/yijian.png"></image><text class="content-login-text">一键加入我的提醒</text></button>
+</view>

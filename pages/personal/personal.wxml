@@ -1,0 +1,143 @@
+<view class="view-head-background-img">
+<view class="view-head">
+<view class="view-avator" bindtap="openedituser">
+<image class="img-avator" src="{{userAvator==null?'/images/icon/not-log-avator.png':userAvator}}"></image>
+<view class="view-edit-avatar">
+<image class="img-edit-avatar" src="/images/icon/edit-avatar.png"></image>
+</view>
+
+</view>
+<view class="view-head-middle">
+
+<view class="view-head-user-name">
+<text class="txt-user-name" bindtap="clickLogin">{{userNickname==null?'点击登录':userNickname}}</text>
+<view wx:if="{{productName!=null}}" class="view-product"><text>{{productName!=''?productName:'免费版'}}</text></view>
+</view>
+<view>
+<text wx:if="{{expireTime!=null}}" class="txt-time-limit">有限期至：{{expireTime}}</text>
+</view>
+
+
+</view>
+
+<view class="view-head-buy-vip" bindtap="buyVip" style="{{IsIos}}">
+<image class="img-head-buy-vip" src="/images/icon/personal-vip.png"></image>
+<text class="txt-head-buy-vip">购买会员</text>
+</view>
+
+</view>
+<view class="view-middle">
+<view class="view-middle-background">
+
+<view class="view-middle-item">
+<text class="txt-middle-item-count">{{msgyue}}</text>
+<text class="txt-middle-item-des">剩余短信</text>
+</view>
+<view class="line-Y"></view>
+<view class="view-middle-item">
+<text class="txt-middle-item-count">{{voiceyue}}</text>
+<text class="txt-middle-item-des">剩余语音</text>
+</view>
+<view class="line-Y"></view>
+<view class="view-middle-item">
+<text class="txt-middle-item-count">{{msguse}}</text>
+<text class="txt-middle-item-des">短信已用</text>
+</view>
+<view class="line-Y"></view>
+<view class="view-middle-item">
+<text class="txt-middle-item-count">{{voiceuse}}</text>
+<text class="txt-middle-item-des">语音已用</text>
+</view>
+
+</view>
+</view>
+
+<view class="view-foot">
+
+<view class="view-foot-item" bindtap="openuserrights" style="{{IsIos}}">
+<view class="view-foot-item-left">
+<image class="img-my-rights" src="/images/icon/my-rights.png"></image>
+<text class="txt-foot-item-des">会员权益</text>
+</view>
+<image class="img-foot-item-right" src="/images/icon/personal-right.png"></image>
+</view>
+
+<view class="line-X" style="width:{{lineXW}}rpx;{{IsIos}}"></view>
+
+<view class="view-foot-item" bindtap="openremindset">
+<view class="view-foot-item-left">
+<image class="img-my-rights" src="/images/icon/personal-remind-set.png"></image>
+<text class="txt-remind-set">提醒设置</text>
+</view>
+<image class="img-foot-item-right" src="/images/icon/personal-right.png"></image>
+</view>
+
+<view class="line-X" style="width:{{lineXW}}rpx;"></view>
+
+<view class="view-foot-item" bindtap="openpushcode">
+<view class="view-foot-item-left">
+<image class="img-promo-code" src="/images/icon/personal-promo-code.png"></image>
+<text class="txt-promo-code">推广码</text>
+</view>
+<image class="img-foot-item-right" src="/images/icon/personal-right.png"></image>
+</view>
+
+<view class="line-X" style="width:{{lineXW}}rpx;"></view>
+
+<!--<view class="view-foot-item" bindtap="openconectus">
+<view class="view-foot-item-left">
+<image class="img-contact-us" src="/images/icon/personal-contact-us.png"></image>
+<text class="txt-contact-us">联系我们</text>
+</view>
+<image class="img-foot-item-right" src="/images/icon/personal-right.png"></image>
+</view>
+
+<view class="line-X" style="width:{{lineXW}}rpx;"></view>-->
+
+<view class="view-foot-item" bindtap="helpinfo">
+<view class="view-foot-item-left">
+<image class="img-help" src="/images/icon/personal-help.png"></image>
+<text class="txt-contact-us">使用帮助</text>
+</view>
+<image class="img-foot-item-right" src="/images/icon/personal-right.png"></image>
+</view>
+
+<view class="line-X" style="width:{{lineXW}}rpx;"></view>
+
+<view class="view-foot-item">
+<button class="itemback" open-type='feedback'>
+<view class="view-foot-item-left">
+<image class="img-help-fankui" src="/images/icon/personal-fankui.png"></image>
+<text class="txt-contact-us">意见反馈</text>
+</view>
+</button>
+<image class="img-foot-item-right fankui" src="/images/icon/personal-right.png"></image>
+</view>
+
+</view>
+</view>
+
+<!-- /*遮罩层，用于新手提示*/ -->
+ <view class='mask' wx:if="{{flag}}" catchtouchmove="myCatchTouch">
+  <view class="mask-ok" bindtap="guanbizhezao">
+    <view class="mask-ok-two">
+     <text>跳过新手指引</text>
+    </view>
+  </view>
+  <view class='one' wx:if="{{showone}}">
+   <popover id='popover' pw='150' ph='200' >
+    <popover-item bindtap='one'>点击头像修改资料</popover-item>    
+    <popover-item bindtap='one'>可绑定手机和邮箱</popover-item>   
+   </popover>
+  </view>
+  <view class='two' wx:if="{{showtwo}}">
+   <popover id='popovertwo' pw='200' ph='200'>
+    <popover-item bindtap='two'>点击此处可设置提醒开关</popover-item>    
+   </popover>
+  </view>
+  <view class='three' wx:if="{{showthree}}">
+   <popover id='popoverthree' pw='250' ph='200'>
+    <popover-item bindtap='three'>邀请好友使用可获取短信语音次数</popover-item>    
+   </popover>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+//产品列表的金额保留两位小数
+var filters = {
+  toFix: function (value) {
+    return value.toFixed(2)
+  },
+  toSub:function(value){
+    var type = value.substring(0, 1);    
+    if(type=="-"){
+return "-";
+    }else if(type=="0"){
+return "0";
+    }else{
+      return "+";
+    }
+  },
+  //删除第一个字符
+  delFirstSub:function(value){
+return value.substring(1);
+  }
+}
+
+module.exports = {
+  toFix: filters.toFix,
+  toSub:filters.toSub,
+  delFirstSub:filters.delFirstSub
+}

@@ -1,0 +1,31 @@
+/* pages/helpword/helpinfo.wxss */
+page{
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.line{
+  margin-top: 20px;
+  width: 100%;
+  border: 1px solid rgb(238, 233, 233);
+}
+.view-plate{
+  margin-top: 15px;
+}
+.view-plate-title{
+  border-bottom: 1px dashed  rgb(228, 226, 226);
+  font-weight: 600;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-left: 15px;
+}
+.view-plate-info{
+  margin-top: 10px;
+  margin-left: 25px;
+  line-height: 2;
+}
+.questation{
+  color: rgb(52, 154, 223);
+}

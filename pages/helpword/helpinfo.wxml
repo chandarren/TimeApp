@@ -1,0 +1,49 @@
+<!--pages/helpword/helpinfo.wxml-->
+<view class="line"></view>
+<view class="view-plate">
+  <text class="view-plate-title">提醒设置</text>
+  <view class="view-plate-info">
+   <text class="questation" bindtap="opendetail" data-type='51'>·如何设置邮箱提醒？\n</text>
+   <text class="questation" bindtap="opendetail" data-type='52'>·如何设置短信提醒？\n</text>
+   <text class="questation" bindtap="opendetail" data-type='53'>·如何设置语音提醒？\n</text>
+  </view>
+</view>
+
+<view class="line"></view>
+<view class="view-plate">
+  <text class="view-plate-title">消息通知</text>
+  <view class="view-plate-info">
+   <text class="questation" bindtap="opendetail" data-type='11'>·为什么我收不到消息通知？\n</text>
+   <text class="questation" bindtap="opendetail" data-type='12'>·我拒绝了消息申请，再也收不到了怎么办？\n</text>
+   <text class="questation" bindtap="opendetail" data-type='13'>·我不想收到微信小程序/公众号提醒通知，怎么做？\n</text>
+   <text class="questation" bindtap="opendetail" data-type='14'>·打开了邮箱提醒按钮却没有通过邮箱获取到提醒信息？\n</text>
+  </view>
+</view>
+
+<view class="line"></view>
+<view class="view-plate">
+  <text class="view-plate-title">语音/短信提醒</text>
+  <view class="view-plate-info">
+   <text class="questation" bindtap="opendetail" data-type='21'>·什么是语音/短信提醒？\n</text>
+   <text class="questation" bindtap="opendetail" data-type='22'>·怎样获得语音/短信条数？\n</text>
+  </view>
+</view>
+
+<view class="line"></view>
+<view class="view-plate">
+  <text class="view-plate-title">提醒事件</text>
+  <view class="view-plate-info">
+   <text class="questation" bindtap="opendetail" data-type='31'>·什么是提醒事件？\n</text>
+   <text class="questation" bindtap="opendetail" data-type='32'>·如何提升创建事件次数？\n</text>
+  </view>
+</view>
+
+<view class="line"></view>
+<view class="view-plate">
+  <text class="view-plate-title">共享提醒</text>
+  <view class="view-plate-info">
+   <text class="questation" bindtap="opendetail" data-type='41'>·什么是共享提醒？\n</text>
+  </view>
+</view>
+
+

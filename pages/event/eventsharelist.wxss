@@ -1,0 +1,42 @@
+.view-recently-remind{
+  margin: 20px 16px;
+}
+
+.view-recently-remind-content{
+margin-top: 24px;
+}
+
+.content-login{
+  height: 25%;
+  margin-top: 50px;
+}
+.content-login-btn{
+  opacity:1;
+  position: absolute;
+  width:221px;
+  height:44px;
+  margin:15% auto;
+  left: 0;
+  right: 0;
+  background:linear-gradient(274deg,rgba(245,115,115,1) 0%,rgba(237,70,70,1) 100%);
+  border-radius:44px;
+}
+
+.content-login-img{
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.content-login-text{
+  position: absolute;
+  font-size:14px;
+  font-family:sans-serif;
+  font-weight:bold;
+  line-height:10px;
+  color:rgba(255,255,255,1);
+  margin-top: 17px;
+  margin-left: -35px;
+}

@@ -1,0 +1,41 @@
+page{
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.view-top{  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:linear-gradient(274deg,rgba(245,115,115,1) 0%,rgba(237,70,70,1) 100%);
+  color: #FFF;
+}
+
+.txt-cancel{  
+  margin: 10px 10px; 
+}
+
+.txt-title{
+  margin: 10px 10px;
+  font-size: 30rpx;
+}
+
+.btn-next{  
+  width: 25px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.input-phone{
+  /*border: 1px red solid;*/
+  /*width: 100%;*/
+  margin-left: 10px;
+  /*margin-right: 10px;*/
+  border-bottom: 1px solid #D8D8D8;
+  margin-top: 20px;  
+}
+
+.view-top-phone{
+  margin-left: 10px;
+  margin-top: 20px;
+}

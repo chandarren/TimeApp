@@ -1,0 +1,21 @@
+<view class="contentone">
+		<image class="content-class-back" src="../../images/register/ty20.png"></image>
+    <image class="content-class-log" src="../../images/register/log.png"></image>
+    <image class="content-class-ty22" src="../../images/register/ty22.png"></image>
+    <text class="content-font-one">重要的事情</text>
+    <text class="content-font-shi">时</text>
+    <text class="content-font-ke">刻</text>
+    <text class="content-font-ji">记</text>
+</view>
+
+<view class="content-login">
+<button class="content-login-btn" wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo"><image class="content-login-img" src="../../images/register/wx.png"></image><text class="content-login-text">微信登录</text></button>
+</view>
+
+<view class="content-foot"  bindtap="lookxieyi">
+	<image class="content-foot-fight" src="../../images/register/ty21.png"></image>
+  <text class="content-foot-one">用户协议</text>
+  <text class="content-foot-two">登录即同意</text><text class="content-foot-two2" bindtap="lookxieyi">《用户协议》</text>
+  <image class="content-foot-left" src="../../images/register/ty24.png"></image>
+</view>
+

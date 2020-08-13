@@ -1,0 +1,62 @@
+<form bindsubmit="informationForm">
+<view class="view-top">
+<text class="text-title">修改个人资料</text>
+</view>
+
+<view class="view-container" style="height:{{viewContainerH}}rpx;">
+<view class="view-body">
+<view class="view-body-middle">
+
+<!-- 昵称 -->
+<view class="view-nickname">
+<view>昵称</view>
+<input class="input-nickname" placeholder-class="placeholder-nickname" placeholder="输入昵称" name="nickName" value="{{nickName}}"></input>
+</view>
+<view class="line"></view>
+<!-- 昵称 -->
+
+<!-- 手机号 -->
+<view class="view-nickname" bindtap="openbindphone">
+<view>手机号</view>
+<input class="input-nickname" placeholder-class="placeholder-nickname" name="mobile" value="{{mobile}}" bindtap="updatePhone"></input>
+</view>
+<view class="line"></view>
+<!-- 手机号 -->
+
+<!-- 邮箱 -->
+<view class="view-nickname">
+<view>邮箱</view>
+<input class="input-nickname" placeholder-class="placeholder-nickname" name="email" value="{{email}}"></input>
+</view>
+<view class="line"></view>
+<!-- 邮箱 -->
+
+<!-- 生日 -->
+<view class="view-date">
+<view>生日</view>
+<picker class="timepicker" mode="date" value="{{currentSelectDate}}" start="1900-01-01" name="birthday" end="{{currentDate}}" bindchange="bindDateChange">
+<view class="picker">{{currentSelectDate}}</view>
+</picker>
+</view>
+<view class="line"></view>
+<!-- 生日 -->
+<!-- 性别 -->
+<view class="view-sex"><view>性别</view><view>
+<radio-group bindchange="sexChange" name="sexRadioGroup">
+<radio class="radio-man" value="男" checked="{{manChecked}}">男</radio>
+<radio value="女" checked="{{womanChecked}}">女</radio>
+</radio-group>
+</view>
+</view>
+<view class="line"></view>
+
+</view>
+
+
+</view>
+<view class="view-save">
+<button class="btn-save" formType="submit"><text decode="true">保&emsp;存</text></button>
+</view>
+
+</view>
+</form>

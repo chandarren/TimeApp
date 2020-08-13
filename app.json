@@ -1,0 +1,64 @@
+{
+  "pages": [   
+    "pages/homepage/homepage", 
+    "pages/personal/personal",
+    "pages/welcome/welcome",
+    "pages/event/eventsharelist",
+    "pages/helpword/helpdetail",
+    "pages/helpword/helpinfo",
+    "pages/homepage/testt",
+    "pages/personal/myinvited",
+    "pages/article/Notice",
+    "pages/product/buyproduct",
+    "pages/article/articledetail",
+    "pages/bindphone/bindphone",
+    "pages/bindphone/bindphonedetail",
+    "pages/bindphone/writecode",
+    "pages/event/addreminder",
+    "pages/event/eventdetail",
+    "pages/event/eventsharedetail",
+    "pages/event/eventlist",
+    "pages/logs/logs",
+    "pages/personal/aboutus",
+    "pages/personal/pushcode",
+    "pages/personal/rights",
+    "pages/remindset/remindset",
+    "pages/share/share",
+    "pages/userinformation/userinformation",    
+    "pages/welcome/zhucexieyi"    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "时刻记",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FE524C",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/icon/tabbar-list-on.png",
+        "iconPath": "images/icon/tabbar-list-no.png",
+        "pagePath": "pages/event/eventlist",
+        "text": "列表"
+      },      
+      {
+        "selectedIconPath": "images/icon/tabbar-home-on.png",
+        "iconPath": "images/icon/tabbar-home-no.png",
+        "pagePath": "pages/homepage/homepage",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icon/tabbar-me-on.png",
+        "iconPath": "images/icon/tabbar-me-no.png",
+        "pagePath": "pages/personal/personal",
+        "text": "我的"
+      }            
+    ]
+  },
+  
+  "sitemapLocation": "sitemap.json"  
+}

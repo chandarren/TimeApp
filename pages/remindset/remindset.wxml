@@ -1,0 +1,70 @@
+<view class="view-top">
+<text class="text-remind">提醒设置</text>
+</view>
+
+<view class="view-body">
+<view class="view-item">
+<view class="view-msg">
+<text>提醒开关</text>
+</view>
+<view class="view-on-off">
+<switch bindchange="defaultchangeMsgRemind" checked="{{ckIsOpenRemind}}" color="#F57373FF"></switch>
+</view>
+</view>
+
+<view class="view-top">
+<text class="text-remind">提醒方式</text>
+</view>
+
+<view class="view-item">
+<view class="view-msg">
+<text>默认提醒</text>
+</view>
+<view class="view-on-off">
+<switch bindchange="changeXcxRemind" checked="{{ckIsXcxRemind}}" color="#F57373FF"></switch>
+</view>
+</view>
+
+<view class="view-item">
+<view class="view-msg">
+<text>公众号提醒</text>
+</view>
+<view class="view-on-off">
+<switch bindchange="changeWxRemind" checked="{{ckIsWxRemind}}" color="#F57373FF"></switch>
+</view>
+</view>
+
+<view class="view-item">
+<view class="view-msg">
+<text>邮箱提醒</text>
+</view>
+<view class="view-on-off">
+<switch bindchange="changeEmailRemind" checked="{{ckIsEmailRemind}}" color="#F57373FF"></switch>
+</view>
+</view>
+
+<view class="view-item">
+<view class="view-msg">
+<text>短信提醒</text>
+</view>
+<view class="view-on-yue">
+<text decode="true">{{msg_yue_num}}条&ensp;</text>
+</view>
+</view>
+
+<view class="view-item">
+<view class="view-msg">
+<text>语音提醒</text>
+</view>
+<view class="view-on-yue">
+<text decode="true">{{voice_yue_num}}条&ensp;</text>
+</view>
+
+</view>
+
+<view class="view-tips">
+<text>温馨提示</text>
+<text>开启提醒后，我们将为你提供更优质的服务，重要时刻绝不错过！为保障你能顺利的收到信息提醒，请完善对应设置！</text>
+</view>
+
+</view>

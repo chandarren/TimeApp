@@ -1,0 +1,19 @@
+<form bindsubmit="informationForm">
+<view class="view-top">
+<text class="text-title">系统公告</text>
+</view>
+
+<view class="view-container" style="height:{{viewContainerH}}rpx;">
+<view class="view-body">
+<view class="content-ask">
+<text>尊敬的用户：</text>
+</view>
+<view class="content-info">
+<text decode="true">&emsp;&emsp;您好！\n&emsp;&emsp;{{notice_content}}</text>
+</view>
+<view class="content-foot">
+<text>时刻记团队\n{{datetime}}</text>
+</view>
+</view>
+</view>
+</form>

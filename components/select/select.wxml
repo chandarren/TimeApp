@@ -1,0 +1,52 @@
+<!-- 下拉菜单 -->
+ <view id="swiper-tab-a">
+ <view class="swiper-tab">
+ <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="tabNav">{{shixiaoval}}
+ <i></i>
+ </view>
+ <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="tabNav">{{typeval}}
+ <i></i>
+ </view>
+ <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="tabNav">{{zhouqival}}
+ <i></i>
+ </view>
+ <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" bindtap="tabNav">{{orderval}}
+ <i></i>
+ </view>
+ </view>
+ <swiper current="{{currentTab}}" duration="500" class="swiper-item" style='display:{{displays}}'>
+ <swiper-item>
+ <view class="location_bottom" hidden="">
+  <view class="{{shixiaokey == 0?'add_citying':'add_city'}}" data-num="0" bindtap="selected" data-name="未过期">未过期</view>
+  <view class="{{shixiaokey == 1?'add_citying':'add_city'}}" data-num="1" bindtap="selected" data-name="已过期">已过期</view>
+ </view>
+ </swiper-item>
+ <swiper-item>
+ <view class="location_bottom" hidden="">
+  <view class="{{typekey == 0?'add_citying':'add_city'}}" data-num="0" bindtap="clickSum" data-name="类型">全部类型</view>
+  <view class="{{typekey == 1?'add_citying':'add_city'}}" data-num="1" bindtap="clickSum" data-name="生日">生日</view>
+  <view class="{{typekey == 2?'add_citying':'add_city'}}" data-num="2" bindtap="clickSum" data-name="纪念日">纪念日</view>
+  <view class="{{typekey == 3?'add_citying':'add_city'}}" data-num="3" bindtap="clickSum" data-name="会议">会议</view>
+  <view class="{{typekey == 4?'add_citying':'add_city'}}" data-num="4" bindtap="clickSum" data-name="活动">活动</view>
+  <view class="{{typekey == 5?'add_citying':'add_city'}}" data-num="5" bindtap="clickSum" data-name="计划">计划</view>
+  <view class="{{typekey == 6?'add_citying':'add_city'}}" data-num="6" bindtap="clickSum" data-name="其它">其它</view>
+ </view>
+ </swiper-item>
+ <swiper-item>
+ <view class="location_bottom" hidden="">
+  <view class="{{zhouqikey == 0?'add_citying':'add_city'}}" data-num="0" bindtap="clickzhouqi" data-name="周期">全部周期</view>
+  <view class="{{zhouqikey == 7?'add_citying':'add_city'}}" data-num="7" bindtap="clickzhouqi" data-name="近一周">近一周</view>
+  <view class="{{zhouqikey == 30?'add_citying':'add_city'}}" data-num="30" bindtap="clickzhouqi" data-name="近一月">近一月</view>
+  <view class="{{zhouqikey == 180?'add_citying':'add_city'}}" data-num="180" bindtap="clickzhouqi" data-name="近半年">近半年</view>
+  <view class="{{zhouqikey == 365?'add_citying':'add_city'}}" data-num="365" bindtap="clickzhouqi" data-name="近一年">近一年</view>
+ </view>
+ </swiper-item>
+ <swiper-item >
+  <view class="location_bottom" hidden="">
+  <view class="{{orderkey == 'asc'?'add_citying':'add_city'}}" data-num="asc" bindtap="choseTxtColor" data-name="升序">按时间升序</view>
+  <view class="{{orderkey == 'desc'?'add_citying':'add_city'}}" data-num="desc" bindtap="choseTxtColor" data-name="降序">按时间降序</view>
+ </view>
+ </swiper-item>
+ </swiper>
+ </view>
+ <view class="swiper-beijing" bindtap="hideNav" style='display:{{displays}}'></view>

@@ -1,0 +1,11 @@
+<!--pages/helpword/helpdetail.wxml-->
+<view class="view-content">
+  <view class="view-title">
+    <image class="view-title-img" src="/images/icon/quesation.png"></image>
+    <text class="view-title-txt">{{myquestion}}</text>
+  </view>
+  <view class="view-body">
+    <text decode="true">&emsp;&emsp;{{myanswer}}</text>
+  </view>
+</view>
+

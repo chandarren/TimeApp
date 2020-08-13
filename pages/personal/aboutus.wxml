@@ -1,0 +1,12 @@
+<view class="view-head-background-img">
+<view class="view-head">
+<image class="view-head-img" src="/images/register/aboutus.png"></image>
+</view>
+</view>
+
+<view class="content">
+<view class="content-info"><image class="conteng-info-img" src="/images/register/phone.png"></image><text decode="true">&emsp;&emsp;客服电话：\n130-4232-9953\n</text></view>
+<view class="content-info"><image class="conteng-info-img" src="/images/register/email.png"></image><text decode="true">&emsp;&emsp;客服邮箱：\ncqzhiyu168@126.com\n</text></view>
+<view class="content-info"><image class="conteng-info-img" src="/images/register/adress.png"></image><text decode="true">&emsp;&emsp;公司地址：\n重庆市南岸区南坪西路28号\n</text></view>
+<view class="content-info"><image class="conteng-info-img" src="/images/register/im-time.png"></image><text decode="true">&emsp;&emsp;工作时间：\n周一至周五&ensp;09:30-18:00&ensp;(国家法定假日除外)</text></view>
+</view>

@@ -1,0 +1,45 @@
+<view class="view-head-background-img">
+<view class="view-head">
+<view class="view-avator" bindtap="login">
+<image class="img-avator" src="{{userAvator==null?'/images/icon/not-log-avator.png':userAvator}}"></image>
+</view>
+</view>
+</view>
+
+<view class="view-head-middle">
+<view class="view-head-user-name">
+<text class="txt-user-name" bindtap="clickLogin">{{userNickname==null?'点击登录':userNickname}}</text>
+<view wx:if="{{productName!=null}}" class="view-product"><text>{{productName!=''?productName:'免费版'}}</text></view>
+</view>
+
+<view wx:if="{{expireTime!=null}}" class="txt-time-limit"><text>有限期至：{{expireTime}}</text></view>
+</view>
+
+<view class="view-content">
+<!-- 会员特权 -->
+<view class="content-rights">
+<view class="title"><image class="title-img"  src="/images/register/urights.png"></image><text class="title-text">会员专享特权</text></view>
+<view class="rights-item">
+<view class="rights-item-view"><image class="rights-item-img" src="/images/register/push.png"></image><text class="rights-item-txt">推送提醒</text></view>
+<view class="rights-item-view"><image class="rights-item-img" src="/images/register/more.png"></image><text class="rights-item-txt">更多创建</text></view>
+<view class="rights-item-view"><image class="rights-item-img" src="/images/register/dbback.png"></image><text class="rights-item-txt">数据备份</text></view>
+<view class="rights-item-view"><image class="rights-item-img" src="/images/register/protect.png"></image><text class="rights-item-txt">隐私保护</text></view>
+<view class="rights-item-view"><image class="rights-item-img" src="/images/register/bodyinfo.png"></image><text class="rights-item-txt">尊贵标识</text></view>
+</view>
+</view>
+
+
+<!-- 温馨提示 -->
+<view class="content-tishi">
+<view class="title"><image class="title-img" src="/images/register/wxtishi.png"></image><text class="title-text wxtishi">温馨提示</text></view>
+<view class="info">
+<text>1、开通会员请前往购买会员通道，购买对应产品即可。\n</text>
+<text>2、开通会员暂仅支持微信支付。\n</text>
+<text>3、会员有效期已选择的产品内容为主。到期后不自动续订。\n</text>
+<text>4、开通会员无法正常使用，请联系客服。\n</text>
+<text>5、会员服务属于虚拟服务业务，自行开通成功后不支持退订，请谅解。\n</text>
+<text>6、本产品最终解释权在法律允许的范围内归时刻记所有。\n</text>
+</view>
+</view>
+
+</view>

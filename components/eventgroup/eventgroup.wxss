@@ -1,0 +1,133 @@
+.view-recently-remind-item-first{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;  
+  /*border: 1px solid red;*/
+}
+.recently-remind-item-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  width:60px;
+  height:60px;
+  background:rgba(247,248,249,1);
+  opacity:1;
+  border-radius:10px;
+}
+.img-recently-remind-item-icon{  
+  width: 24px;
+  height:24px;   
+}
+.view-recently-remind-item-content{
+  display: flex;
+  flex-direction: column;          
+}
+.view-recently-remind-item-content-title{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.txt-recently-remind-item-content-title{
+  font-size:14px;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgba(54,55,58,1);
+  opacity:1;
+overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 80px;
+}
+.view-share{
+  display: flex;
+  justify-content: center;
+  width:90px;
+  height:16px;
+  background:rgba(96,209,106,1);
+  border:1px solid rgba(67,191,78,1);
+  opacity:1;
+  border-radius:2px;
+  margin-left: 8px;
+}
+.txt-share{  
+  font-size:11px;
+  font-family:Source Han Sans CN;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  opacity:1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.txt-recently-remind-item-content-des{
+  height:33px;
+  font-size:12px;
+  font-family:PingFang SC;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  opacity:1;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp:2;
+  -webkit-box-orient: vertical;
+  margin-top: 7px;
+}
+.view-recently-remind-item-end{    
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;  
+  /*border: 1px solid red;      */
+}
+.view-recently-remind-item-time{
+  display: flex;
+  justify-content: flex-end;
+}
+.txt-recently-remind-item-time{
+  display: flex;
+  font-size:14px;
+  font-family:PingFang SC;
+  font-weight:bold;
+  color:rgb(245, 120, 120);
+  opacity:1;
+}
+.view-recently-remind-item-ellipsis-list{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  /*justify-content:flex-end;*/
+  /*border: 1px solid red;  */
+}
+.view-recently-remind-item-ellipsis{
+  width:4.5px;
+  height:4px;
+  background:rgb(95, 95, 95);
+  opacity:1;
+  margin-left: 2.5px;
+  border-radius: 20px;    
+}
+
+.view-recently-remind-item-ellipsis-middle{
+  width:6.5px;
+  height:6px;
+  background:rgb(95, 95, 95);
+  opacity:1;
+  margin-left: 2.5px;
+  border-radius: 20px;   
+}
+
+.tt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /*border: 1px solid darkcyan;*/
+}
+
+.view-cb-img{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+}

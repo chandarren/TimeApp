@@ -1,0 +1,59 @@
+page{
+  
+  background-color: #323230;
+    
+}
+
+.view-top{  
+  display: flex;  
+  justify-content: center; 
+}
+
+.text-title{
+  margin: 10px 10px;
+  font-size: 40rpx;
+  color: white;
+}
+
+.canvas-code{
+  background-size: cover;
+  /*width: 220px;
+  height: 350px;*/
+  /*border: 1px rgb(187, 164, 31) solid;*/
+}
+
+.tt{
+  
+/*border: 1px red solid;*/
+
+/*margin-left: 50px;
+margin-right: 50px;*/
+margin-top: 30px;
+display: flex;
+justify-content: center;
+
+
+}
+
+.view-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.btn-save{  
+  /*width: 220px;*/
+  background-color: #beab9c;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-share{
+/*width: 220px;*/
+  background-color: #7f8c8d;
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+}

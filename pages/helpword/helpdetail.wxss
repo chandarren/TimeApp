@@ -1,0 +1,41 @@
+/* pages/helpword/helpdetail.wxss */
+page{
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: black;
+}
+.view-content{
+  position: fixed;
+  width: 90%;
+  min-height: 300px;
+  margin: 20px auto;
+  left: 0;
+  right: 0;
+}
+.view-title{
+  display: block;
+  position: absolute;
+  height: 30px;
+  width: 100%;
+  line-height: 1.5;
+}
+.view-title-img{
+  display: block;
+  position: absolute;
+  width: 24px;
+  height:24px;
+  margin-top: 0px;
+}
+.view-title-txt{
+  display: block;
+  position: absolute;
+  font-size: 1.2em;
+  color: rgb(52, 154, 223);
+  margin-left: 35px;
+}
+.view-body{
+  position: absolute;
+  margin-top: 65px;
+  line-height: 1.7;
+}

@@ -1,0 +1,8 @@
+<!--pages/homepage/articledetail.wxml-->
+<!-- <text>pages/homepage/articledetail.wxml</text>
+<view class="article-content">
+<view><text>昨天，删去。今天，留着。明天，争取。</text></view>
+<view><text>摘自微信美文</text></view>
+</view> -->
+<!--<web-view src="https://mp.weixin.qq.com/s?__biz=MzI2OTQ4MTYyMg==&mid=100000041&idx=1&sn=40aec7fc7c7ba8bb34efe0e14123fd74&chksm=6adee2d05da96bc6bcf27acafae57d19a12dd6dfc6b06e7888e45e7ae3393f7dd0b03c6a0ffc#rd"></web-view>-->
+<web-view src="{{urls}}"></web-view>

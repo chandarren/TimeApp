@@ -1,0 +1,20 @@
+<view class="view-top">
+<text class="text-title">绑定手机号</text>
+</view>
+
+<view class="view-body">
+<view class="view-bind-phone">
+<image mode="widthFix" class="img-bind-phone" src="/images/icon/bind-phone1.png"></image>
+<text wx:if="{{phone!=''}}" class="txt-phone">绑定的手机号：{{phone}}</text>
+<text wx:else class="txt-phone">未绑定</text>
+</view>
+
+<view class="view-btn-bind">
+<button wx:if="{{phone!=''}}" class="btn-bind" bindtap="bindPhone">更换手机号</button>
+<button wx:else class="btn-bind" bindtap="bindPhone">绑定手机号</button>
+<button class='btn-bind' open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">一键绑定微信手机号</button>
+</view>
+<!-- <view class="view-btn-bind">
+
+</view> -->
+</view>

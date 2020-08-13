@@ -1,0 +1,757 @@
+/* 遮罩层 */
+ 
+.conts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 90;
+}
+ 
+/* 第一级左上角新手指导 */
+ 
+.tab_next {
+  position: relative;
+  top: 75rpx;
+  width: 100%;
+  height: 100rpx;
+  display: inline-block;
+}
+ 
+.module_cont21 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 66%;
+}
+ 
+.module_cont21 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 72%;
+}
+ 
+.modules_bottom21 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 50%;
+  line-height: 100rpx;
+}
+ 
+.modules_me_imgs21 {
+  position: absolute;
+  bottom: 87%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(35deg);
+  left: 78%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.head_tab {
+  position: absolute;
+  top: 6%;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  line-height: 80rpx;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* background:rgb(191, 191, 191); *//* width:320rpx;
+height:66rpx; */
+  border-radius: 25rpx;
+  margin: 0 auto;
+}
+ 
+/* 顶部选项卡 */
+ 
+/* 主动一下 */
+ 
+.suc_lab {
+  width: 145rpx;
+  height: 54rpx;
+  display: block;
+  font-size: 25rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: rgb(254, 254, 254);
+  font-weight: normal;
+  border: 2rpx rgb(254, 254, 254) solid;
+  border-radius: 20rpx 0 0 20rpx;
+  margin: 4rpx 1rpx 0 8rpx;
+  background: rgb(255, 185, 215);
+}
+ 
+.module_cont22 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 68%;
+}
+ 
+.modules_me_imgs22 {
+  position: absolute;
+  bottom: 85%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(25deg);
+  left: 78%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.head_tab_suc_lab {
+}
+ 
+.head_tab_suc_labs {
+  width: 145rpx;
+  height: 54rpx;
+  display: block;
+  font-size: 25rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: #fff;
+  background: rgb(191, 191, 191);
+  border: rgb(254, 254, 254) solid 2rpx;
+  border-radius: 0 20rpx 20rpx 0;
+  margin: 4rpx 8rpx 0 5rpx;
+}
+ 
+.module_img_co {
+  position: absolute;
+  width: 150rpx;
+  height: 67rpx;
+  line-height: 67rpx;
+  top: -63%;
+  background-color: #999;
+  border-bottom-right-radius: 30rpx;
+  display: inline-block;
+  border-top-right-radius: 30rpx;
+}
+ 
+.module_url {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  position: absolute;
+  display: inline-block;
+  left: 10rpx;
+  top: 12rpx;
+}
+ 
+.module_hed {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  display: inline-block;
+  left: 44%;
+  top: -138%;
+}
+ 
+.module_name {
+  position: absolute;
+  right: 30rpx;
+  color: #fff;
+  font-size: 20rpx;
+}
+ 
+.suc_labs {
+  /* width: 145rpx;
+  height: 54rpx;
+  display: block;
+  font-size: 25rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: #fff;
+  background: rgb(191, 191, 191);
+  border: rgb(254, 254, 254) solid 2rpx;
+  border-radius: 0 20rpx 20rpx 0;
+  margin: 4rpx 8rpx 0 5rpx; */
+}
+ 
+/* 邀请好友 */
+ 
+.tab_nexts {
+  position: relative;
+  top: 198rpx;
+  width: 100%;
+  height: 100rpx;
+  display: inline-block;
+}
+ 
+/* 跳过新手指导 */
+ 
+.next_imgs {
+  position: relative;
+  left: 5%;
+  width: 242rpx;
+  text-align: center;
+  background: url("http://static.mqsocial.com/imgs/party/online/v3/common/noob/chat.png");
+  height: 76rpx;
+  line-height: 76rpx;
+  background-size: cover;
+  font-size: 30rpx;
+  color: #fff;
+}
+ 
+/* modules文案视图********************************************** */
+ 
+.module_cont {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 25%;
+}
+ 
+.module_cont_tab1 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 51%;
+}
+ 
+.module_cont2 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 22%;
+}
+ 
+.module_cont3 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 28%;
+}
+ 
+.module_cont4 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 28%;
+}
+ 
+.module_cont5 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 53%;
+}
+ 
+.module_cont8 {
+  /* position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 55%; */
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 25%;
+}
+ 
+.module_cont9 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 46%;
+}
+ 
+.module_cont10 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 46%;
+}
+ 
+.module_cont11 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 18%;
+}
+ 
+.module_cont12 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 28%;
+}
+ 
+.module_cont13 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 49%;
+}
+ 
+.module_cont15 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 22%;
+}
+ 
+/* modules背景状态 */
+ 
+.module_bg {
+  position: relative;
+  left: 15%;
+  width: 60%;
+  text-align: center;
+  /* display: flex; */
+  height: 82%;
+  line-height: 82%;
+  background: url("http://static.mqsocial.com/imgs/party/online/v3/common/noob/con_view.png");
+  background-size: 100% 70%;
+  background-repeat: no-repeat;
+}
+ 
+/* modules文案状态 */
+ 
+.modules_text {
+  overflow: auto;
+  width: 85%;
+  height: 150rpx;
+  text-align: left;
+  padding: 10rpx 10rpx;
+  position: relative;
+  top: 7%;
+  display: inline-block;
+  color: #fff;
+  font-size: 28rpx;
+}
+ 
+/* 指导线状态 */
+ 
+.modules_wites_img {
+  position: absolute;
+  top: 58%;
+  left: 60%;
+  width: 158rpx;
+  height: 102rpx;
+}
+ 
+.modules_wites_img1 {
+  position: absolute;
+  top: 64%;
+  left: 36%;
+  width: 158rpx;
+  height: 102rpx;
+}
+ 
+.modules_wites_img4 {
+  position: absolute;
+  top: -35%;
+  left: 59%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-85deg);
+}
+ 
+.modules_wites_img8 {
+  position: absolute;
+  top: -35%;
+  left: 38%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-85deg);
+}
+ 
+.modules_wites_img9 {
+  position: absolute;
+  top: -35%;
+  left: 37%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-85deg);
+}
+ 
+.modules_me_imgs9 {
+  position: absolute;
+  bottom: 149%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(30deg);
+  left: 28%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_wites_img12 {
+  position: absolute;
+  top: 72%;
+  left: 59%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-45deg);
+}
+ 
+.modules_wites_img13 {
+  position: absolute;
+  top: -39%;
+  left: 59%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-85deg);
+}
+ 
+.modules_wites_img18 {
+  position: absolute;
+  top: -39%;
+  left: 38%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-10deg);
+}
+ 
+.modules_me_imgs24 {
+  position: absolute;
+  bottom: 143%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(35deg);
+  left: 54%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+/* 指导飞机提示状态 */
+ 
+.modules_me_imgs {
+  position: absolute;
+  bottom: 1%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
+  left: 74%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_me_imgs18 {
+  position: absolute;
+  bottom: 143%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(145deg);
+  left: 60%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_me_imgs1 {
+  position: absolute;
+  bottom: 1%;
+  -moz-transform: rotate(-55deg);
+  -webkit-transform: rotate(-55deg);
+  left: 24%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.module_cont19 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 13%;
+}
+ 
+.module_cont26 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 22%;
+}
+ 
+.modules_wites_img26 {
+  position: absolute;
+  top: 68%;
+  left: 69%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-10deg);
+}
+ 
+.modules_me_imgs26 {
+  position: absolute;
+  bottom: -10%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(-45deg);
+  left: 56%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_me_imgs4 {
+  position: absolute;
+  bottom: 149%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(30deg);
+  left: 52%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.module_cont14 {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  top: 27%;
+}
+ 
+.modules_wites_img14 {
+  position: absolute;
+  top: 69%;
+  left: 59%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-85deg);
+}
+ 
+.modules_me_imgs14 {
+  position: absolute;
+  bottom: -19%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(-35deg);
+  left: 65%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_me_imgs8 {
+  position: absolute;
+  bottom: 157%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(135deg);
+  left: 39%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_me_imgs10 {
+  position: absolute;
+  bottom: -16%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(-40deg);
+  left: 63%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_me_imgs12 {
+  position: absolute;
+  bottom: -21%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(-55deg);
+  left: 56%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_me_imgs13 {
+  position: absolute;
+  bottom: 143%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(25deg);
+  left: 50%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+.modules_wites_img10 {
+  position: absolute;
+  top: 67%;
+  left: 59%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-85deg);
+}
+ 
+.modules_wites_img19 {
+  position: absolute;
+  top: 32%;
+  left: 77%;
+  width: 158rpx;
+  height: 102rpx;
+  -webkit-transform: rotate(-75deg);
+}
+ 
+.modules_me_imgs19 {
+  position: absolute;
+  bottom: 19%;
+  -moz-transform: rotate(-50deg);
+  -webkit-transform: rotate(-45deg);
+  left: 76%;
+  width: 85rpx;
+  height: 41rpx;
+}
+ 
+/* 组件阅读视图状态 */
+ 
+.modules_bottom {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 28%;
+  line-height: 100rpx;
+  /* background-color: #fff; */
+}
+ 
+.modules_bottom2 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 23%;
+  line-height: 100rpx;
+}
+ 
+.modules_bottom12 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 26%;
+  line-height: 100rpx;
+}
+ 
+.modules_bottom13 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 43%;
+  line-height: 100rpx;
+}
+ 
+.modules_bottom26 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 16%;
+  line-height: 100rpx;
+}
+ 
+.modules_red_img26 {
+  position: absolute;
+  left: 15%;
+  width: 237rpx;
+  height: 104rpx;
+}
+ 
+.modules_bottom5 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 47%;
+  line-height: 100rpx;
+}
+ 
+.modules_bottom8 {
+  /* position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 47%;
+  line-height: 100rpx; */
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 18%;
+  line-height: 100rpx;
+}
+ 
+.modules_bottom9 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 40%;
+  line-height: 100rpx;
+}
+ 
+.modules_bottom10 {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  top: 40%;
+  line-height: 100rpx;
+}
+ 
+/* 组件阅读按钮状态 */
+ 
+.modules_red_img {
+  position: absolute;
+  right: 12%;
+  width: 237rpx;
+  height: 104rpx;
+}
+ 
+.modules_red_img12 {
+  position: absolute;
+  left: 15%;
+  width: 237rpx;
+  height: 104rpx;
+}
+ 
+.modules_red_img13 {
+  position: absolute;
+  right: 15%;
+  width: 237rpx;
+  height: 104rpx;
+}
+ 
+/* 卡牌 */
+ 
+.card_cont {
+  position: relative;
+  top: 20%;
+  left: 63%;
+  width: 30%;
+  margin: 10rpx;
+  height: 325rpx;
+  background-color: #f5f5f5;
+  background: url('http://static.mqsocial.com/imgs/party/online/v3/endlessMode/cards/blue_card.png') no-repeat;
+  border-radius: 10rpx;
+  background-size: cover;
+  text-align: center;
+}
+ 
+.card_cont_head {
+  top: 45rpx;
+  width: 90rpx;
+  display: inline-block;
+  position: relative;
+  height: 90rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+ 
+.card_name {
+  text-align: center;
+  position: relative;
+  top: 45rpx;
+  font-size: 28rpx;
+}
+ 
+.card_time {
+  position: relative;
+  top: 58rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 28rpx;
+}
+ 
+.card_time text {
+  width: 100rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  background-color: #ccc;
+  font-size: 23rpx;
+  color: rgb(102, 102, 102);
+  border-radius: 15rpx;
+  padding: 5rpx 20rpx;
+}
+ 
+.card_tow {
+  position: relative;
+  top: 75rpx;
+  color: rgb(102, 102, 102);
+  width: 100%;
+  text-align: center;
+  font-size: 23rpx;
+}

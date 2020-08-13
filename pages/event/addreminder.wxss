@@ -1,0 +1,288 @@
+.txt-title{
+  font-size:24px;
+font-family:PingFang SC;
+font-weight:800;
+color:rgba(54,55,58,1);
+opacity:1;
+margin-left: 16px;
+}
+
+.txt-event-name,.txt-remind-type,.txt-topic-description{
+  font-size:16px;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(40,40,40,1);
+opacity:1;
+}
+
+.view-event-name,.view-topic-description{
+  margin: 10px 16px;
+}
+
+.input-event-name,.input-topic-description{
+  font-size:12px;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(254,77,75,1);
+opacity:1;
+margin-top: 16px;
+}
+
+.line-X{
+  width:100%;
+height:1px;
+background:rgba(238,238,238,1);
+opacity:1;
+border-radius:5px;
+margin-top: 12px;
+}
+
+.view-remind-type{
+  margin: 16px 16px;
+}
+
+.input-remind-type{
+  font-size:12px;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(254,77,75,1);
+opacity:1;
+
+
+}
+
+.view-remind-type-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;  
+  margin-top: 16px;  
+}
+
+.img-right{
+  width:5px;
+height:9px;
+opacity:1;
+margin-top: 1px;
+}
+
+.txt-select{
+  font-size:12px;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(40,40,40,1);
+opacity:1;
+margin-right: 8.5px;
+}
+
+.view-remind-type-right{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.picker{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.view-date{
+  margin: 16px 16px;  
+}
+
+.txt-date{
+  font-size:16px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(40,40,40,1);
+opacity:1;
+}
+
+.input-date-select{
+  font-size:12px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(254,77,75,1);
+opacity:1;
+/*border: 1px solid rgb(61, 146, 226);*/
+width: 74%;
+}
+
+.txt-date-type{
+  font-size:12px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(254,77,75,1);
+opacity:1;
+/*border: 1px solid rgb(61, 146, 226);*/
+/*text-align: right;*/
+}
+
+.view-date-select{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;  
+  width: 200.5px;
+  margin-top: 16px;  
+}
+
+.view-select{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+}
+
+.view-date-type-select{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /*border: 1px solid red;*/
+  
+  margin-top: 16px;
+}
+
+.view-date-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;    
+}
+
+.view-tips{
+  font-size:12px;
+font-family:sans-serif;
+font-weight:500;
+color:rgba(153,153,153,1);
+opacity:1;
+margin-top: 12px;
+}
+.view-tips-red{
+  font-size:12px;
+  font-family:sans-serif;
+  font-weight:500;
+  color:rgba(254,77,75,1);
+  opacity:1;
+  margin-top: 12px;
+}
+
+.txt-remind-set-title{
+  font-size:16px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(40,40,40,1);
+opacity:1;
+}
+
+.view-remind-set{
+  margin: 16px 16px;
+}
+
+.btn-remind-set-on{
+  width:59px;
+height:32px;
+background:rgba(254,77,75,1);
+opacity:1;
+border-radius:3px;
+
+font-size:9px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(255,255,255,1);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.btn-remind-set-no{
+  width:59px;
+height:32px;
+background:rgba(255,255,255,1);
+opacity:1;
+border-radius:3px;
+border:1px solid rgba(238,238,238,1);
+font-size:9px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(102,102,102,1);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.btn-remind-set-on::after{
+  border: none;
+}
+
+.btn-remind-set-no::after{
+border: none;
+}
+
+.view-remind-set-option{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.view-reminder-notes{
+  margin: 16px 16px;
+}
+
+.txt-reminder-notes{
+  font-size:16px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(40,40,40,1);
+opacity:1;
+}
+
+.ta-reminder-notes{
+  width: 100%;
+  height:120px;  
+background:rgba(249,249,249,1);
+opacity:1;
+border-radius:3px;
+
+font-size:12px;
+font-family:sans-serif;
+font-weight:500;
+line-height:16.5px;
+color:rgba(102,102,102,1);
+padding-top: 8px;
+}
+
+.view-textarea{
+  margin-top: 16px;  
+}
+
+.btn-add-reminder{
+  width:160px;
+height:49px;
+background:rgba(254,77,75,1);
+opacity:1;
+border-radius:24.5px;
+
+font-size:16px;
+font-family:sans-serif;
+font-weight:bold;
+color:rgba(255,255,255,1);
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 40px;
+margin-bottom: 33px;
+}
+
+.btn-add-reminder::after{
+border: none;
+}
+
+.view-select-item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;  
+}

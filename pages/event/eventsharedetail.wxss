@@ -1,0 +1,225 @@
+page{
+  background-color: #FFFFFF;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+ /* 头部 */
+.view-head{
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  background:url("https://shikeji.oss-cn-huhehaote.aliyuncs.com/d8c97d7094bc28aa9a180509e559f33.png");
+  background-size: 100% 100%;
+}
+ /* 头部 */
+ /* 内容 */
+.view-content{
+  position: absolute;
+  width: 94%;
+  min-height: 650px;
+  margin:80px auto;
+  left: 0;
+  right: 0;
+  border-radius:10px;
+  background-color: #F7F7F7;
+  box-shadow:0px 3px 20px rgba(0,0,0,0.05);
+}
+.content-theme{
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  border-radius:10px;
+  background-color: #FFFFFF;
+  box-shadow:0px 3px 20px rgba(0,0,0,0.05);
+}
+.theme-days{
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  top: -15px;
+  left: -11px;
+  color:rgba(254,77,75,1);
+}
+.theme-days-img{
+  width: 125px;
+  height: 125px;
+}
+.theme-days-day{
+  position: absolute;
+  font-size:35px;
+  font-weight:bold;
+  display:inline-block;
+  transform:scale(0.8,1.2);
+  left:20px;
+  line-height: 125px;
+}
+.theme-days-day2{
+  font-weight:bold;
+  font-size: 14px;
+  padding-left: 2px;
+}
+.theme-riqi{
+  position: absolute;
+  width: 200px;
+  height: 53.5px;
+  left: 20px;
+  bottom: 11px;
+}
+.riqi-back{
+  width: 200px;
+  height: 53.5px;
+}
+.riqi-info{
+  position: absolute;
+  width: 200px;
+  height: 20px;
+  font-weight: bold;
+  color: #282828FF;
+  left: 0;
+  top:11px;
+  bottom: 22px;
+}
+.riqi-nongli{
+  color: #282828FF;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 14px;
+  left: -2px;
+}
+.theme-img{
+  position: absolute;
+  width: 142.9px;
+  height: 113px;
+  right: 20px;
+  bottom: 20px;
+}
+.theme-imgss{
+  width: 142.9px;
+  height: 113px;
+}
+
+/* 主题和详情分割线 */
+.content-info{
+  position: absolute;
+  width: 100%;
+  margin-top: 215px;
+  min-height: 300px;
+  border-radius:10px;
+  background-color: #FFFFFF;
+  box-shadow:0px 3px 20px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+.content-title{
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  line-height: 50px;
+}
+.c-title{
+  width: 70%;
+  height: 50px;
+  float: left;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  color:#282828FF;
+}
+.c-theme{
+  width: 23%;
+  height: 50px;
+  float: right;
+  text-align: center;
+  font-weight: bold;
+  color: #494BEBFF;
+}
+.c-detailinfo{
+  position: absolute;
+  min-height: 150px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 2;
+  color: #999999FF; 
+  overflow: hidden;
+}
+.c-bottom{
+  position: absolute;
+  text-align: right;
+  bottom: 10px;
+  right: 20px;
+  height:16px;
+  width: auto;
+  font-size: 12px;
+  color: rgba(67,191,78,1);
+}
+  /* 分享部分 */
+.share-info{
+  position: absolute;
+  width: 100%;
+  margin-top: 525px;
+  min-height: 130px;
+  border-radius:10px;
+  background-color: #FFFFFF;
+  box-shadow:0px 3px 20px rgba(0,0,0,0.05);
+}
+.share-ewm{
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  left: 19%;
+  top:20px;
+}
+.share-info-txt{
+  position: absolute;
+  width:126px;
+  font-size:18px;
+  font-weight:bold;
+  color:rgba(40,40,40,1);
+  right: 19%;
+  top: 45px;
+  text-align: center;
+}
+.share-info2{
+  font-size:12px;
+  font-weight:500;
+  line-height:20.5px;
+  color:rgba(40,40,40,1);
+}
+
+.content-login{
+  height: 25%;
+  margin-top: 650px;
+}
+.content-login-btn{
+  opacity:1;
+  position: absolute;
+  width:221px;
+  height:44px;
+  margin:15% auto;
+  left: 0;
+  right: 0;
+  background:linear-gradient(274deg,rgba(245,115,115,1) 0%,rgba(237,70,70,1) 100%);
+  border-radius:44px;
+}
+
+.content-login-img{
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.content-login-text{
+  position: absolute;
+  font-size:14px;
+  font-family:sans-serif;
+  font-weight:bold;
+  line-height:10px;
+  color:rgba(255,255,255,1);
+  margin-top: 17px;
+  margin-left: -35px;
+}

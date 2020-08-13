@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "eventgroup": "/components/eventgroup/eventgroup"
+  }
+}

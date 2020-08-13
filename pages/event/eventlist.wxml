@@ -1,0 +1,143 @@
+<!--<text class="txt-title">事件列表</text>-->
+
+
+<view class="view-search-container">
+<view class="view-search">
+<view class="view-search-icon">
+<image class="img-search" src="/images/icon/search.png"></image>
+</view>
+<view class="view-search-txt">
+<input class="input-search" confirm-type="search" placeholder="请输入提醒事件关键词" bindconfirm="startSearch"></input>
+</view>
+</view>
+
+<view class="view-search-clean">
+<image class="img-search-clean" src="/images/icon/search-clean.png" bindtap="cleanSearch"></image>
+</view>
+</view>
+
+
+<!--<view class="view-search-condition">
+<text class="{{all?'txt-all-on':'txt-all-no'}}" bindtap="txtQueryCycleClick" data-type="all">全部</text>
+<view class="view-search-condition-date">
+<text class="{{oneWeek?'txt-other-on':'txt-other-no'}}" bindtap="txtQueryCycleClick" data-type="oneWeek">近一周</text>
+<text class="{{oneMouth?'txt-other-on':'txt-other-no'}}" bindtap="txtQueryCycleClick" data-type="oneMouth">近一月</text>
+<text class="{{halfYear?'txt-other-on':'txt-other-no'}}" bindtap="txtQueryCycleClick" data-type="halfYear">近半年</text>
+<text class="{{oneYear?'txt-other-on':'txt-other-no'}}" bindtap="txtQueryCycleClick" data-type="oneYear">近一年</text>
+</view>
+
+<view class="view-dropdown" bindtap="timeDropdown">
+<text class="txt-search-condition">{{timeSortType}}</text>
+<image class="img-down-list" src="/images/icon/down-list.png"></image>
+</view>
+
+</view>-->
+
+
+<select id="selectCom" bind:shixiao='shixiaofun' bind:zhouqi='zhouqifun' bind:type='typefun' bind:paixu='orderfun'></select>
+
+
+<view class="view-recently-remind">
+<view class="view-recently-remind-content" wx:if="{{isEventList}}">
+
+<eventgroup id="{{item.id}}" class="eventg" wx:for="{{eventList}}" wx:key="key" eventtype='{{item.eventtype}}' title='{{item.title}}' describe='{{item.describe}}' date_remark="{{item.date_remark}}" fromshare="{{item.fromshare}}" index='{{item.id}}' type='noenjoylist' bind:selectItem="selectItem" bind:delSelectItem="delSelectItem" bind:shuaxin="shuaxin"></eventgroup>
+
+<!--<view class="view-recently-remind-item-first" wx:for="{{eventList}}" wx:key="key" data-item="{{item}}" bindtap="eventDetail">
+
+<view class="recently-remind-item-img">
+<image class="img-recently-remind-item-icon" src="/images/icon/event-type-{{item.eventtype}}.png"></image>
+</view>
+
+<view class="view-recently-remind-item-content" style="width:{{recentlyRemindItemContentW}}rpx;">
+<view class="view-recently-remind-item-content-title">
+<text class="txt-recently-remind-item-content-title">{{item.title}}</text>
+<view class="view-share" wx:if="{{item.fromshare!=''}}">
+<text class="txt-share">来自{{item.fromshare}}分享</text>
+</view>
+
+</view>
+
+<text class="txt-recently-remind-item-content-des" style="width:{{recentlyRemindItemContentW}}rpx;">{{item.describe}}</text>
+</view>
+
+<view class="view-recently-remind-item-end" style="width:{{recentlyRemindItemEndW}}rpx;">
+<view class="view-recently-remind-item-time">
+<text class="txt-recently-remind-item-time">{{item.date_remark==0?'今天':(item.date_remark==1?'明天':(item.date_remark==2?'后天':item.date_remark+'天后'))}}</text>
+</view>
+<view class="view-recently-remind-item-ellipsis-list">
+<view class="view-recently-remind-item-ellipsis"></view>
+<view class="view-recently-remind-item-ellipsis"></view>
+<view class="view-recently-remind-item-ellipsis"></view>
+</view>
+
+</view>
+
+</view>-->
+
+<!--<view class="view-recently-remind-item">
+
+<view class="recently-remind-item-img">
+<image class="img-recently-remind-item-icon" src="/images/icon/recently-remind-2.png"></image>
+</view>
+
+<view class="view-recently-remind-item-content" style="width:{{recentlyRemindItemContentW}}rpx;">
+<text class="txt-recently-remind-item-content-title">公司例会</text>
+<text class="txt-recently-remind-item-content-des" style="width:{{recentlyRemindItemContentW}}rpx;">记得与李总对接峰会交接的事情，还有会场布置的进度以及下一项环节内记得与李总</text>
+</view>
+
+<view class="view-recently-remind-item-end" style="width:{{recentlyRemindItemEndW}}rpx;">
+<view class="view-recently-remind-item-time">
+<text class="txt-recently-remind-item-time">253天后</text>
+</view>
+<view class="view-smail-title">
+<text class="txt-smail-title">本季总结</text>
+</view>
+</view>
+</view>
+
+<view class="view-recently-remind-item">
+
+<view class="recently-remind-item-img">
+<image class="img-recently-remind-item-icon" src="/images/icon/recently-remind-3.png"></image>
+</view>
+
+<view class="view-recently-remind-item-content" style="width:{{recentlyRemindItemContentW}}rpx;">
+<text class="txt-recently-remind-item-content-title">战友聚会</text>
+<text class="txt-recently-remind-item-content-des" style="width:{{recentlyRemindItemContentW}}rpx;">记得与李总对接峰会交接的事情，还有会场布置的进度以及下一项环节内记得与李总</text>
+</view>
+
+<view class="view-recently-remind-item-end" style="width:{{recentlyRemindItemEndW}}rpx;">
+<view class="view-recently-remind-item-time">
+<text class="txt-recently-remind-item-time">6天后</text>
+</view>
+<view class="view-smail-title">
+<text class="txt-smail-title">分别十年</text>
+</view>
+</view>
+</view>-->
+
+</view>
+<view wx:else class="view-no-recent-reminder">
+暂无相关提醒
+</view>
+</view>
+
+
+<view class="view-bottom" hidden="{{isQuanXuanShow}}">
+<view class="view-select-all">
+<checkbox class="cb-select-all" bindtap="selectAll" checked="{{cbSelectAll}}"></checkbox>
+<text class="txt-select-all">全选</text>
+</view>
+<view class="line-Y"></view>
+<text class="txt-del" bindtap="delEvent">删除</text>
+<view class="line-Y"></view>
+<!--<text class="txt-enjoy">共享</text>-->
+<view><button class="btn-enjoy" open-type="{{isNullShare}}" bindtap="shareEvent">共享</button></view>
+<view class="line-Y"></view>
+<text class="txt-cancel" bindtap="cancel">取消</text>
+</view>
+
+
+<view class="view-multiple-operations" style="margin-bottom:{{multipleOperationsMB}}px" bindtap="multipleOperations">
+<text class="txt-multiple-operations">多选</text>
+</view>

@@ -1,0 +1,314 @@
+<!-- 组件遮罩引导 -->
+<view class='page' hidden='{{modalHidden}}'>
+  <view class='conts'>
+    <!--*****************************组件左上角新手引导 ***************************-->
+    <view class='head_tab' wx:if="{{pract_id==4}}">
+      <label class='suc_lab'>
+        <text>主动一点</text>
+      </label>
+      <label class='suc_labs'>矜持一点</label>
+    </view>
+    <view class='head_tab' wx:if="{{pract_id==7}}">
+      <label class='head_tab_suc_lab'>
+        <text>主动一点</text>
+      </label>
+      <label class='head_tab_suc_labs'>矜持一点</label>
+    </view>
+    <view class='tab_nexts' wx:if="{{pract_id==4||pract_id==7}}">
+      <view class='next_imgs' bindtap='btn_next'>
+        跳过新手引导
+      </view>
+    </view>
+    <view class='tab_next' wx:else>
+      <view class='next_imgs' bindtap='btn_next'>
+        跳过新手引导
+      </view>
+    </view>
+    <!--*****************************组件初始化1小程序介绍 ***************************-->
+    <view class='module_cont' wx:if="{{pract_id==0}}">
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+      <image class='modules_wites_img' src='{{wite_top_img}}'></image>
+      <image class='modules_me_imgs' src='{{less_img}}'></image>
+    </view>
+    <view class='modules_bottom' wx:if="{{pract_id==0}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodules'></image>
+    </view>
+    <!--*****************************组件初始化2设置入口 ***************************-->
+    <view class='module_cont_tab1' wx:if="{{pract_id==1}}">
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+      <image class='modules_wites_img1' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs1' src='{{less_img}}'></image>
+    </view>
+    <!-- <view class='modules_bottom' wx:if="{{pract_id==2}}">
+      <image src='{{read_img}}' class='modules_red_img'></image>
+    </view> -->
+ 
+    <!--*****************************组件初始化小程序3设置页面 ***************************-->
+    <view class='module_cont2' wx:if="{{pract_id==2}}">
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+      <image class='modules_wites_img' src='{{wite_top_img}}'></image>
+      <image class='modules_me_imgs' src='{{less_img}}'></image>
+    </view>
+    <view class='modules_bottom2' wx:if="{{pract_id==2}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodule2'></image>
+    </view>
+    <!--*****************************组件初始化小程序4练习大冒险 ***************************-->
+    <view class='module_cont3' wx:if="{{pract_id==3}}">
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+      <image class='modules_wites_img' src='{{wite_top_img}}'></image>
+      <image class='modules_me_imgs' src='{{less_img}}'></image>
+    </view>
+    <!-- <view class='modules_bottom2' wx:if="{{pract_id==3}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodule2'></image>
+    </view> -->
+    <!--*****************************组件初始化小程序5主动一下（邀请好友） ***************************-->
+    <view class='module_cont4' wx:if="{{pract_id==4}}">
+      <image class='modules_wites_img4' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs4' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+ 
+    </view>
+    <view class='modules_bottom2' wx:if="{{pract_id==4}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodule4'></image>
+    </view>
+ 
+    <!--*****************************组件初始化小程序6好友列表 ***************************-->
+    <view class='module_cont5' wx:if="{{pract_id==5}}">
+      <image src='{{img_src}}' class='module_hed'></image>
+      <view class='module_img_co'>
+        <image src='{{img_src}}' class='module_url'></image>
+        <label class='module_name'>小恋爱</label>
+ 
+      </view>
+      <image class='modules_wites_img4' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs4' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+ 
+    </view>
+    <view class='modules_bottom5' wx:if="{{pract_id==5}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodule6'></image>
+    </view>
+ 
+    <!--*****************************组件初始化小程序7矜持一下） ***************************-->
+    <view class='module_cont4' wx:if="{{pract_id==7}}">
+      <image class='modules_wites_img4' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs4' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom2' wx:if="{{pract_id==7}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodule7'></image>
+    </view>
+ 
+    <!--*****************************组件初始化小程序8催促邀请 ***************************-->
+    <!-- 卡牌 -->
+    <view class='card_cont' wx:if="{{pract_id==8}}">
+      <image src="{{image}}" class='card_cont_head'></image>
+      <view class='card_name'>laowu</view>
+      <view class='card_time'>
+        <text>已催促</text>
+      </view>
+      <view class='card_tow'>1楼</view>
+    </view>
+    <!--  -->
+    <view class='module_cont8' wx:if="{{pract_id==8}}">
+      <image class='modules_wites_img8' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs8' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom8' wx:if="{{pract_id==8}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodule8'></image>
+    </view>
+    <!--*****************************组件初始化小程序9体力值 ***************************-->
+    <view class='module_cont9' wx:if="{{pract_id==9}}">
+      <image class='modules_wites_img9' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs9' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom9' wx:if="{{pract_id==9}}">
+      <image src='{{read_img}}' class='modules_red_img' bindtap='btnmodule9'></image>
+    </view>
+    <!--*****************************组件初始化小程序10邀请好友闯关 ***************************-->
+    <view class='module_cont10' wx:if="{{pract_id==10}}">
+      <image class='modules_wites_img10' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs10' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <!--*****************************组件初始化小程序11邀请好友闯关 ***************************-->
+    <view class='module_cont11' wx:if="{{pract_id==11}}">
+      <image class='modules_wites_img10' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs10' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <!--*****************************组件初始化小程序12闯关须知 ***************************-->
+    <view class='module_cont12' wx:if="{{pract_id==12}}">
+      <image class='modules_wites_img12' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs12' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom12' wx:if="{{pract_id==12}}">
+      <image src='{{read_img}}' class='modules_red_img12' bindtap='btnmodule12'></image>
+    </view>
+    <!--*****************************组件初始化小程序13好友加入 ***************************-->
+    <view class='module_cont13' wx:if="{{pract_id==13}}">
+      <image class='modules_wites_img13' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs13' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom13' wx:if="{{pract_id==13}}">
+      <image src='{{read_img}}' class='modules_red_img13' bindtap='btnmodule13'></image>
+    </view>
+    <!--*****************************组件初始化小程序14倒计时 ***************************-->
+    <view class='module_cont14' wx:if="{{pract_id==14}}">
+      <image class='modules_wites_img14' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs14' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <!-- <view class='modules_bottom13' wx:if="{{pract_id==14}}">
+      <image src='{{read_img}}' class='modules_red_img13' bindtap='btnmodule14'></image>
+    </view> -->
+    <!--*****************************组件初始化小程序15阅读 ***************************-->
+    <view class='module_cont15' wx:if="{{pract_id==15}}">
+      <image class='modules_wites_img12' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs12' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom12' wx:if="{{pract_id==15}}">
+      <image src='{{read_img}}' class='modules_red_img12' bindtap='btnmodule15'></image>
+    </view>
+    <!--*****************************组件初始化小程序16阅读倒计时 ***************************-->
+    <view class='module_cont13' wx:if="{{pract_id==16}}">
+      <image class='modules_wites_img13' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs13' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom13' wx:if="{{pract_id==16}}">
+      <image src='{{read_img}}' class='modules_red_img13' bindtap='btnmodule16'></image>
+    </view>
+ 
+    <!--*****************************组件初始化小程序17回顾问题 ***************************-->
+    <view class='module_cont13' wx:if="{{pract_id==17}}">
+      <image class='modules_wites_img13' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs13' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom13' wx:if="{{pract_id==17}}">
+      <image src='{{read_img}}' class='modules_red_img13' bindtap='btnmodule17'></image>
+    </view>
+ 
+    <!--*****************************组件初始化小程序18发言 ***************************-->
+    <view class='module_cont13' wx:if="{{pract_id==18}}">
+      <image class='modules_wites_img18' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs18' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom13' wx:if="{{pract_id==18}}">
+      <image src='{{read_img}}' class='modules_red_img13' bindtap='btnmodule18'></image>
+    </view>
+ 
+    <!--*****************************组件初始化小程序19选项 ***************************-->
+    <view class='module_cont19' wx:if="{{pract_id==19}}">
+      <image class='modules_wites_img19' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs19' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <!--*****************************组件初始化小程序20回答正确 ***************************-->
+    <view class='module_cont19' wx:if="{{pract_id==20}}">
+      <image class='modules_wites_img19' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs19' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <!--*****************************组件初始化小程序21回答错误 ***************************-->
+   <view class='module_cont19' wx:if="{{pract_id==21}}">
+      <image class='modules_wites_img19' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs19' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+      <view class='modules_bottom21' wx:if="{{pract_id==21}}">
+      <image src='{{read_img}}' class='modules_red_img13' bindtap='btnmodule21'></image>
+    </view>
+ 
+      <!--*****************************组件初始化小程序22继续闯关 ***************************-->
+    <view class='module_cont22' wx:if="{{pract_id==22}}">
+      <image class='modules_wites_img19' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs22' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+      <!--*****************************组件初始化小程序23回答错误 ***************************-->
+    <view class='module_cont21' wx:if="{{pract_id==23}}">
+      <image class='modules_wites_img19' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs21' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <!--*****************************组件初始化小程序24进阶成功 ***************************-->
+    <view class='module_cont13' wx:if="{{pract_id==24}}">
+      <image class='modules_wites_img18' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs24' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom13' wx:if="{{pract_id==24}}">
+      <image src='{{read_img}}' class='modules_red_img13' bindtap='btnmodule24'></image>
+    </view>
+ 
+ 
+    <!--*****************************组件初始化小程序25错题回顾 ***************************-->
+    <view class='module_cont26' wx:if="{{pract_id==26}}">
+      <image class='modules_wites_img26' src='{{wites_img}}'></image>
+      <image class='modules_me_imgs26' src='{{less_img}}'></image>
+      <view class='module_bg'>
+        <label class='modules_text'>{{context}}</label>
+      </view>
+    </view>
+    <view class='modules_bottom26' wx:if="{{pract_id==26}}">
+      <image src='{{read_img}}' class='modules_red_img26' bindtap='btnmodule26'></image>
+    </view>
+ 
+  </view>
+</view>

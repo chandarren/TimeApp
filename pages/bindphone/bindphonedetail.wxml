@@ -1,0 +1,17 @@
+<view class="view-top">
+<text class="txt-cancel" bindtap="cancel">取消</text>
+<text wx:if="{{phone!=''}}" class="txt-title">更换手机号</text>
+<text wx:else class="txt-title">绑定手机号</text>
+<!-- <button class="btn-next" bindtap="next" disabled="{{nextDisabled}}">下一步</button> -->
+<image class="btn-next" src="/images/icon/nextdo.png" bindtap="next" disabled="{{nextDisabled}}"></image>
+</view>
+
+<view class="view-body">
+<view class="view-top-phone">
+<text wx:if="{{phone!=''}}">当前手机号：{{phone}}</text>
+</view>
+<view class="view-bottom-phone">
+<input bindinput="watchPhone" class="input-phone" placeholder="请填写手机号码"></input>
+</view>
+
+</view>

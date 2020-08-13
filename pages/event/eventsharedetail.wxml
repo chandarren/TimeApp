@@ -1,0 +1,46 @@
+<!-- 头部 -->
+<view class="view-head"> 
+</view>
+<!-- 头部 -->
+
+<!-- 内容部分 -->
+<view class="view-content">
+  <view class="content-theme">
+    <view class="theme-days">
+      <image class="theme-days-img" src="/images/icon/yuan45.png"></image>
+      <text class="theme-days-day">{{day}}<text class="theme-days-day2" decode="true">&ensp;{{dayTxt}}</text></text>
+    </view>
+    <view class="theme-riqi">
+      <image class="riqi-back" src="/images/icon/Label.png"></image>
+      <text class="riqi-info">{{gongli}}<text class="riqi-nongli">\n（{{nongli}}）</text></text>
+    </view>
+    <view class="theme-img">
+      <image class="theme-imgss" src="/images/icon/undraw_Booked.png"></image>
+    </view>
+  </view>
+
+  <view class="content-info">
+    <view class="content-title">
+      <text class="c-title">{{eventTitle}}</text>
+      <text class="c-theme">{{theme}}</text>
+    </view>
+    <view class="c-detailinfo">
+    <text>{{describe}}</text>
+    </view>
+    <view class="c-bottom" wx:if="{{fromshare!=''}}"><text>--来自{{fromshare}}的分享</text></view>
+  </view>
+
+  <!-- 分享识别部分 -->
+  <view class="share-info">
+    <image class="share-ewm" src="/images/icon/code20.png"></image>
+    <text class="share-info-txt">长按识别小程序<text class="share-info2">\n重要时刻·时刻记</text></text>
+  </view>
+  <!-- 分享识别部分 -->
+
+  <view class="content-login">
+<button class="content-login-btn" bindtap="oneButtonJoin"><image class="content-login-img" src="../../images/icon/yijian.png"></image><text class="content-login-text">一键加入我的提醒</text></button>
+</view>
+
+</view>
+<!-- 内容部分 -->
+

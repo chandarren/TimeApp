@@ -1,0 +1,54 @@
+page{
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+.view-top{  
+  display: flex;
+  justify-content: center;
+  background:linear-gradient(274deg,rgba(245,115,115,1) 0%,rgba(237,70,70,1) 100%);
+  color: #FFF;
+}
+
+.text-remind{
+  margin: 10px 10px;
+  font-size: 30rpx;  
+}
+
+.view-item{
+  margin-top: 2rpx;
+  /* border-top: 1px rgb(221, 220, 220) solid; */
+  border-bottom: 1px rgb(221, 220, 220) solid;
+  display: flex;
+  height: 45px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view-msg{  
+  margin: 20rpx 20rpx;  
+}
+
+.view-on-off{
+  margin: 20rpx 20rpx;
+  width: 40px;
+  height: 16px;
+}
+.view-on-yue{
+  margin-right: 5rpx;
+  color: #707070;
+  width: 50px;
+  height: 25px;
+  text-align: center;
+}
+.view-tips{
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  color: #707070;
+  margin: 20rpx 20rpx;  
+}
+.wx-switch-input{width:40px !important;height:16px !important;margin-top: -5px;}
+.wx-switch-input::before{width:40px !important;height: 16px !important;}
+.wx-switch-input::after{width: 18px !important;height: 13px !important;}

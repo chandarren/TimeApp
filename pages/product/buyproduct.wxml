@@ -1,0 +1,75 @@
+<!--<text class="txt-title">充值购买</text>-->
+
+
+<view class="line"></view>
+
+
+<view class="view-tips">
+<image class="img-tips" src="/images/icon/buy-product-tips.png"></image>
+<text class="view-tips-content" >1、该产品一经售出概不退换。\n2、购买2年起9折、4年以上8折优惠。\n3、购买时长类产品，同版本自动叠加时长。低版本升级到高版本时（购买时长不低于原版本时长）可享受差价补贴。</text>
+</view>
+
+<view class="view-product-name">
+    <swiper  display-multiple-items='1' previous-margin="{{boxMarginW}}" next-margin="{{boxMarginW}}" bindchange="productChange" current="{{current}}" circular="true" style="height:{{swiperH}}rpx">    <!--这里是设置显示一张-->
+      <block wx:for="{{test}}" wx:key="{{index}}">             <!--遍历js中的图片-->
+        <swiper-item>									<!--box外层swiper-->
+          <view class="{{index==current?'box-select':'box'}}" style="width:{{index==current?boxSelectW:boxW}}rpx; height:{{index==current?boxSelectW:boxW}}rpx;" data-current="{{index}}" bindtap="bindTab">						<!--重点处理box-->            
+            <view class='content'>
+              <text class="{{index==current?'txt-product-item-name-select':'txt-product-item-name'}}">{{item.title}}</text>
+              <view class="view-product-item-des">
+              <text class="{{index==current?'txt-product-item-des-select':'txt-product-item-des'}}">{{item.type==1?'￥'+item.prize+'元/年':'￥'+item.prize+'元/份'}}\n{{item.subtitle}}</text>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+</view> 
+
+
+<view class="view-product-description">
+<text>{{test[current].remark}}</text>
+</view>
+
+<view class="view-product-duration" wx:if="{{test[current].type==1}}">
+<text class="txt-product-duration">购买时长</text>
+<view class="view-product-duration-select">
+<view><button class="{{oneyear?'btn-product-duration-on':'btn-product-duration-no'}}" bindtap="btnProductDurationClick" data-type="oneyear" data-num="1">1年</button></view>
+<view><button class="{{twoyears?'btn-product-duration-on':'btn-product-duration-no'}}" bindtap="btnProductDurationClick" data-type="twoyears" data-num="2">2年</button></view>
+<view><button class="{{fouryears?'btn-product-duration-on':'btn-product-duration-no'}}" bindtap="btnProductDurationClick" data-type="fouryears" data-num="4">4年</button></view>
+<view><button class="{{fiveyears?'btn-product-duration-on':'btn-product-duration-no'}}" bindtap="btnProductDurationClick" data-type="fiveyears" data-num="8">8年</button></view>
+</view>
+</view>
+
+<view class="view-product-count" wx:if="{{test[current].type==2}}">
+<text class="txt-product-count">购买数量</text>
+<view class='progress-root-container'>  
+  <view class='progress-max' style="width:{{progressMaxW}}rpx"></view>
+  <view class='progress-current' style="width:{{2*progress}}rpx"></view>
+  <!--<text class='pencent-text'>{{progressText}}</text>-->
+  <image class='slice-button' src='/images/icon/slide.png' catchtouchmove="buttonMove" catchtouchstart="buttonStart" catchtouchend="buttonEnd" style="left:{{2*buttonLeft}}rpx"/>
+</view>
+
+<view class="view-buy-count">
+<text class="txt-buy-count">{{progressText}}</text>
+<text class="txt-unit">份</text>
+</view>
+</view>
+
+
+<view class="view-bottom">
+<view class="view-bottom-content">
+<view class="view-bottom-left">
+<text class="txt-total">合计：</text>
+<text class="txt-amount">￥{{totalAmount}}</text>
+<text class="txt-youhui">已优惠￥{{youhui}}</text>
+</view>
+<view>
+<text class="txt-remark">{{remark}}</text>
+</view>
+</view>
+
+<view>
+<button class="btn-confirm-payment" disabled="{{btnPaymentDis}}" bindtap="btnPayment">确认支付</button>
+</view>
+</view>

@@ -1,0 +1,14 @@
+<view class="view-head-background-img">
+<view class="view-head"><text>我邀请的好友</text>
+</view>
+</view>
+
+<view class="view-invited" wx:if="{{hasList}}">
+  <view class="invited-list"  wx:for="{{myList}}" wx:for-index="idx" wx:for-item="item" >
+    <image class="photo" src="{{item.avator}}"></image>
+    <text class="nickname">{{item.niuckname}}</text>
+  </view>
+</view>
+<view class="viewno-invited" wx:else>
+  <text class="tishi">暂无相关邀请</text>
+</view>

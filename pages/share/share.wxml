@@ -1,0 +1,12 @@
+<view class="view-top">
+<text class="text-title">生成邀请海报</text>
+</view>
+
+<view class="tt">
+<canvas class="canvas-code" canvas-id="shareCanvas" style="width: {{canvasW}}px; height: {{canvasH}}px;"></canvas>
+</view>
+
+<view class="view-button" style="display:{{viewButton}}">
+<button class="btn-save" style="width: {{canvasW}}px;" bindtap="saveImg">保存邀请海报至相册</button>
+<button class="btn-share" style="width: {{canvasW}}px;" open-type="share">发送小程序给好友</button>
+</view>

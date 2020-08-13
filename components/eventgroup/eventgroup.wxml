@@ -1,0 +1,45 @@
+<view class="view-recently-remind-item-first">
+
+<view class="view-cb-img">
+<checkbox-group bindchange="ff" data-id="{{index}}">
+<checkbox style="{{isCbShow}}" data-id="{{index}}" bindtap="rr" checked="{{cbEvent}}"></checkbox>
+</checkbox-group>
+
+<view class="recently-remind-item-img"  bindtap="eventDetail">
+    <image class="img-recently-remind-item-icon" src="/images/icon/event-type-{{eventtype}}.png"></image>
+  </view>
+</view>
+  
+  <view class="view-recently-remind-item-content" style="width:{{recentlyRemindItemContentW}}rpx;" bindtap="eventDetail">
+    <!-- <text class="txt-recently-remind-item-content-title">{{title}}</text> -->
+    <view class="view-recently-remind-item-content-title">
+      <text class="txt-recently-remind-item-content-title">{{title}}</text>
+      <view class="view-share" wx:if="{{fromshare!=''}}">
+      <text class="txt-share">来自{{fromshare}}分享</text>
+      </view>
+    </view>
+    <text class="txt-recently-remind-item-content-des" style="width:{{recentlyRemindItemContentW}}rpx;">{{describe}}</text>
+  </view>
+  <view class="view-recently-remind-item-end" style="width:{{recentlyRemindItemEndW}}rpx;">
+    <view class="view-recently-remind-item-time">
+    <text class="txt-recently-remind-item-time">{{date_remark==-1?'--':(date_remark==0?'今天':(date_remark==1?'明天':(date_remark==2?'后天':date_remark+'天后')))}}</text>
+    </view>
+    <!-- <view class="view-recently-remind-item-chk">
+
+    </view> -->
+    <view class="tt" wx:if="{{type!='enjoylist'}}">
+    <view class="view-null"></view>
+<view class="view-recently-remind-item-ellipsis-list" id="{{index}}" bindtap="onTap">
+      <view class="view-recently-remind-item-ellipsis"></view>
+      <view class="view-recently-remind-item-ellipsis-middle"></view>
+      <view class="view-recently-remind-item-ellipsis"></view>
+    </view>
+    </view>
+    
+  </view>
+</view>
+
+<popover id='popover'>
+    <popover-item bindtap='editClick' hasline>编辑</popover-item>
+    <popover-item bindtap='deleteClick'>删除</popover-item>    
+  </popover>

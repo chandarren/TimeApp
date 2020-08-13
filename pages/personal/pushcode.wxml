@@ -1,0 +1,28 @@
+<view class="view-head-background-img">
+<view class="view-head">
+</view>
+</view>
+
+<view class="view-invited">
+<!-- 邀请码区域 -->
+<view class="view-invited-top">
+<text class="invited-remark">每邀请<text  class="invited-remark-num">1</text>人，送<text  class="invited-remark-num">5</text>次语音/短信提醒</text>
+<text class="invited-code">您的邀请码</text>
+<view class="invited-code-info">
+<text class="code-info"  wx:for="{{pushcodeList}}" wx:for-item="it">{{it}}</text>
+</view>
+<button class="invited-btn" bindtap="sendinvited" open-type="share"><text decode="true">立&ensp;即&ensp;邀&ensp;请</text></button>
+<text class="has-invited" decode="true"  bindtap="showmyinvited">已邀请&ensp;<text  class="invited-remark-num">{{myinvitedperson}}</text>&ensp;人</text>
+</view>
+<!-- 邀请规则说明 -->
+<view class="view-invited-info">
+<view class="invited-guize"><text>邀请规则</text></view>
+<view>
+<view class="invited-guize-txt">
+<text class="zuize-index">1、</text>
+<text class="guize-content">点击“立即邀请”，分享页面给指定好友，好友登录使用即邀请成功，你可免费获取5次提醒语音及短信提醒；</text>
+</view>
+<view class="invited-guize-txt"><text class="zuize-index">2、</text><text class="guize-content">邀请好友数量无限制；</text></view>
+</view>
+</view>
+</view>

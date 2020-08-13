@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "eventgroup": "/components/eventgroup/eventgroup",
+    "select": "/components/select/select"
+  }
+}

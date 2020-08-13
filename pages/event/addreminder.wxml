@@ -1,0 +1,148 @@
+<form bindsubmit="reminderForm">
+<view class="view-event-name">
+<text class="txt-event-name">名称</text>
+<input class="input-event-name" placeholder="请输入事件提醒名称" name="eventTitle" value="{{eventTitle}}" maxlength="10" bindblur='ValidateTxt'></input>
+<view class="line-X"></view>
+<view class="view-tips-red">{{vlidatetxt}}</view>
+</view>
+
+<!-- <view class="view-topic-description">
+<text class="txt-topic-description">主题说明</text>
+<input class="input-topic-description" placeholder="请输入主题说明" name="topicDescription" value="{{topicDescription}}" maxlength="5"></input>
+<view class="line-X"></view>
+</view> -->
+
+<view class="view-remind-type">
+<text class="txt-remind-type">提醒类型</text>
+<picker value="{{remindTypeArray[remindTypeIndex].id}}" range="{{remindTypeArray}}" range-key="{{'name'}}" bindchange="remindTypeChange">
+  <view class="view-remind-type-content">
+    <input class="input-remind-type" placeholder="请选择事件提醒类型" value="{{remindTypeArray[remindTypeIndex].name}}" disabled="true"></input>
+    <view class="view-remind-type-right">
+      <view class="picker">
+        <text class="txt-select">请选择</text>
+        <image class="img-right" src="/images/icon/add-reminder-right.png"></image>
+      </view>
+    </view>
+  </view>
+</picker>
+<view class="line-X"></view>
+</view>
+
+<view class="view-remind-set">
+<text class="txt-remind-set-title">重复提醒</text>
+<view class="view-remind-set-option">
+<view><button class="{{noRepeat?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnRemindersClick" disabled="{{disnoRepeat}}" data-type="noRepeat">不重复</button></view>
+<view><button class="{{everyday?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnRemindersClick" disabled="{{diseveryday}}" data-type="everyday">每天</button></view>
+<view><button class="{{weekly?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnRemindersClick" disabled="{{disweekly}}" data-type="weekly">每周</button></view>
+<view><button class="{{monthly?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnRemindersClick" disabled="{{dismonthly}}" data-type="monthly">每月</button></view>
+<view><button class="{{everyyear?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnRemindersClick" data-type="everyyear">每年</button></view>
+</view>
+<view class="view-tips" wx:if="{{isRemindTips}}">{{remindTips}}</view>
+</view>
+
+
+<view class="view-date">
+<text class="txt-date">日期</text>
+<view class="view-date-content">
+<picker wx:if="{{everyday}}" mode="time" value="{{time}}" bindchange="bindTimeChange">
+<view class="view-date-select">
+<input class="input-date-select" placeholder="请选择日期" disabled="true" value="{{currentSelectDate}}" name="eventDate"></input>
+<view class="view-select">
+<view class="view-select-item">
+<text class="txt-select">请选择</text>
+<image class="img-right" src="/images/icon/add-reminder-right.png"></image>
+</view>
+</view>
+</view>
+</picker>
+
+<picker wx:elif="{{weekly}}" value="{{weekArrayIndex}}" bindchange="bindWeekChange" range="{{weekArray}}" range-key="{{'name'}}">
+<view class="view-date-select">
+<input class="input-date-select" placeholder="请选择日期" disabled="true" value="{{currentSelectDate}}" name="eventDate"></input>
+<view class="view-select">
+<view class="view-select-item">
+<text class="txt-select">请选择</text>
+<image class="img-right" src="/images/icon/add-reminder-right.png"></image>
+</view>
+</view>
+</view>
+</picker>
+
+<picker wx:elif="{{monthly}}" value="{{monthArray[monthArrayIndex].id}}" bindchange="bindMonthChange" range="{{monthArray}}" range-key="{{'name'}}">
+<view class="view-date-select">
+<input class="input-date-select" placeholder="请选择日期" disabled="true" value="{{currentSelectDate}}" name="eventDate"></input>
+<view class="view-select">
+<view class="view-select-item">
+<text class="txt-select">请选择</text>
+<image class="img-right" src="/images/icon/add-reminder-right.png"></image>
+</view>
+</view>
+</view>
+</picker>
+
+<picker wx:elif="{{everyyear}}" mode="multiSelector" bindchange="bindEveryyearChange" bindcolumnchange="bindEveryyearColumnChange" value="{{everyyearIndex}}" range="{{everyyearArray}}">
+    <view class="view-date-select">
+<input class="input-date-select" placeholder="请选择日期" disabled="true" value="{{currentSelectDate}}" name="eventDate"></input>
+<view class="view-select">
+<view class="view-select-item">
+<text class="txt-select">请选择</text>
+<image class="img-right" src="/images/icon/add-reminder-right.png"></image>
+</view>
+</view>
+</view>
+  </picker>
+
+  
+    <view class="view-date-select" wx:elif="{{noRepeat}}" bindtap="selectDate">
+<input class="input-date-select" placeholder="请选择日期" disabled="true" value="{{currentSelectDate}}" name="eventDate"></input>
+<view class="view-select">
+<view class="view-select-item">
+<text class="txt-select">请选择</text>
+<image class="img-right" src="/images/icon/add-reminder-right.png"></image>
+</view>
+</view>
+</view>
+  
+
+<view class="view-date-type-select">
+<text class="txt-date-type">{{dateType}}</text>
+</view>
+</view>
+<view class="line-X"></view>
+<view class="view-tips">除每日提醒外，其它默认提醒时间为每日8点后</view>
+</view>
+
+<view class="view-remind-set">
+<text class="txt-remind-set-title">提醒时间</text>
+<view class="view-remind-set-option">
+<view><button class="{{theSameDay?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTimeClick" data-type="theSameDay">当天</button></view>
+<view><button class="{{oneday?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTimeClick" data-type="oneday" disabled="{{disOneday}}">前一天</button></view>
+<view><button class="{{twoday?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTimeClick" data-type="twoday" disabled="{{disTwoday}}">前两天</button></view>
+<view><button class="{{oneweek?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTimeClick" data-type="oneweek" disabled="{{disOneweek}}">前一周</button></view>
+<view><button class="{{onemonth?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTimeClick" data-type="onemonth" disabled="{{disOnemonth}}">前一月</button></view>
+</view>
+</view>
+
+<view class="view-remind-set">
+<text class="txt-remind-set-title">提醒方式</text>
+<view class="view-remind-set-option">
+<view><button class="{{default?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTypeClick" data-type="default">默认</button></view>
+<view><button class="{{officialAccount?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTypeClick" data-type="officialAccount">公众号</button></view>
+<view><button class="{{email?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTypeClick" data-type="email">邮件</button></view>
+<view><button class="{{message?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTypeClick" data-type="message">短信</button></view>
+<view><button class="{{voip?'btn-remind-set-on':'btn-remind-set-no'}}" bindtap="btnReminderTypeClick" data-type="voip">语音</button></view>
+</view>
+<view class="view-tips">{{remindTypeTips}}</view>
+</view>
+
+<view class="view-reminder-notes">
+<text class="txt-reminder-notes">提醒备注</text>
+<view class="view-textarea">
+<textarea class="ta-reminder-notes" maxlength="-1" name="reminderNotes" value="{{reminderNotes}}"></textarea>
+</view>
+</view>
+
+<button class="btn-add-reminder" formType="submit">{{type=='新增'?'创建提醒':'修改提醒'}}</button>
+<button bindtap="dingyue" style="display:none"></button>
+<datepicker-plus bind:submit="submit" showDatePickerPlus="{{show}}" initDate="{{currentDate}}"></datepicker-plus>
+</form>
